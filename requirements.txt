@@ -1,0 +1,7 @@
+pillow
+numpy
+opencv-python-headless
+flask
+flask-cors
+waitress
+gunicorn
