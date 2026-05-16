@@ -151,3 +151,23 @@ For any questions, issues, or feature requests, please contact our support team.
     &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.youtube.com/@recognito-vision" style="display: flex; align-items: center;"><img src="https://recognito.vision/wp-content/uploads/2024/04/youtube_64_cl.png" style="width: 32px; margin-right: 5px;"/></a>
 </p>
 
+
+## ?? Render Deployment (Auto-deploy)
+
+This project is configured for one-click deployment on [Render](https://render.com).
+
+### Prerequisites
+1. Push this project to your GitHub repository: https://github.com/NARALAMANOJYADAV/smartatt.
+2. Create a [Render](https://render.com) account.
+
+### Deployment Steps
+1. Go to the **Render Dashboard**.
+2. Click **New +** and select **Web Service**.
+3. Connect your GitHub repository smartatt.
+4. Render will automatically detect the settings from ender.yaml and equirements.txt.
+5. Set the environment variable PORT to 8000 (if not already picked up).
+6. Click **Deploy Web Service**.
+
+The application will be available at your Render URL (e.g., https://smart-face-recognition.onrender.com).
+
+---
