@@ -3,7 +3,7 @@ services:
     name: smart-face-recognition
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python flask/app.py
+    startCommand: gunicorn --chdir flask app:app
     envVars:
       - key: PORT
         value: 8000
