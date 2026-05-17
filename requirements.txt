@@ -5,3 +5,5 @@ flask
 flask-cors
 waitress
 gunicorn
+gradio
+psycopg2-binary

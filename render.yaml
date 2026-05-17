@@ -3,7 +3,7 @@ services:
     name: smart-face-recognition
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn main:app
+    startCommand: python gradio/app.py
     envVars:
       - key: PORT
         value: 8000

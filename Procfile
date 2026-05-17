@@ -1,3 +1,3 @@
-web: gunicorn main:app
+web: python gradio/app.py
 
 
