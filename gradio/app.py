@@ -1023,9 +1023,17 @@ def launch_demo(activate_result):
 
             refresh_btn.click(lambda: (fetch_users_for_admin(), fetch_logs_for_admin(), refresh_manage_dropdown()), inputs=[], outputs=[users_table, logs_table, user_to_manage])
 
-        import os
         port = int(os.environ.get("PORT", 7860))
         demo.queue().launch(server_name="0.0.0.0", server_port=port, css=css)
+
+
+def activate_sdk():
+    ret = init_sdk()
+    if ret == 0:
+        print("Successfully init SDK!")
+    else:
+        print(f"Failed to init SDK, Error code {ret}")
+    return ret
 
 
 if __name__ == '__main__':
