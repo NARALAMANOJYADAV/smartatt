@@ -1,7 +1,8 @@
-import sys
-sys.path.append('../')
-
 import os
+import sys
+# Add the project root to the sys.path to resolve imports correctly
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import base64
 import json
 import cv2
@@ -34,6 +35,10 @@ def activate_sdk():
         print(f"Falied to init SDK, Error code {ret}")
 
     return ret
+
+# Proactively activate the SDK during module load so it works under production servers (like Gunicorn)
+activate_sdk()
+
 
 @app.route('/api/analyze_face', methods=['POST'])
 def analyze_face_api():

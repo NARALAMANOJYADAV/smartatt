@@ -1,5 +1,7 @@
+import os
 import sys
-sys.path.append('../')
+# Add the project root to the sys.path to resolve imports correctly
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from tkinter import *
 from tkinter import ttk
